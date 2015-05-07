@@ -1,0 +1,56 @@
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\bin\Release\Percepciones.WPF.exe.config
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\bin\Release\Percepciones.WPF.exe
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\bin\Release\Percepciones.WPF.pdb
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\bin\Release\Prueba.WPF.exe
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\bin\Release\Prueba.WPF.pdb
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Interfaz_v1.baml
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Interfaz_v1.g.cs
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\App.g.cs
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF_MarkupCompile.cache
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.g.resources
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.Properties.Resources.resources
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.exe
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.pdb
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Percepciones.WPF.exe.config
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.csproj.ResolveComReference.cache
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.exe
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.pdb
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Percepciones.WPF.exe
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Percepciones.WPF.pdb
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Microsoft.WindowsAPICodePack.dll
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Prueba.WPF.exe
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Microsoft.WindowsAPICodePack.pdb
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Microsoft.WindowsAPICodePack.Shell.pdb
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Prueba.WPF.pdb
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Interfaz_v1.baml
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Interfaz_v1.g.cs
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\App.g.cs
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF_MarkupCompile.cache
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.g.resources
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.Properties.Resources.resources
+C:\CPR Gustavo\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.csproj.GenerateResource.Cache
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Percepciones.WPF.exe.config
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.csproj.ResolveComReference.cache
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.exe
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.pdb
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Percepciones.WPF.exe
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Percepciones.WPF.pdb
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Microsoft.WindowsAPICodePack.dll
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Microsoft.WindowsAPICodePack.pdb
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\bin\Release\Microsoft.WindowsAPICodePack.Shell.pdb
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Interfaz_v1.baml
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Interfaz_v1.g.cs
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\App.g.cs
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF_MarkupCompile.cache
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.g.resources
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.Properties.Resources.resources
+F:\One Drive\OneDrive\Desarrollo\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.csproj.GenerateResource.Cache
+F:\Documentos\GitHub\Percepciones\PercepcionesApp\Percepciones.WPF\bin\Release\Percepciones.WPF.exe.config
+F:\Documentos\GitHub\Percepciones\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.csproj.ResolveComReference.cache
+F:\Documentos\GitHub\Percepciones\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.exe
+F:\Documentos\GitHub\Percepciones\PercepcionesApp\Percepciones.WPF\obj\x86\Release\Percepciones.WPF.pdb

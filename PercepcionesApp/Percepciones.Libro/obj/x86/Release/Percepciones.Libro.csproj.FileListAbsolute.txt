@@ -1,0 +1,14 @@
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\bin\Release\Percepciones.Libro.exe.config
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\bin\Release\Percepciones.Libro.exe
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\bin\Release\Percepciones.Libro.pdb
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\MainWindow.baml
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\MainWindow.g.cs
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\App.g.cs
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\Percepciones.Libro_MarkupCompile.cache
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\Percepciones.Libro.g.resources
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\Percepciones.Libro.Properties.Resources.resources
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\Percepciones.Libro.exe
+C:\Users\desarrolloit\Documents\Visual Studio 2010\Projects\PercepcionesApp\Percepciones.Libro\obj\x86\Release\Percepciones.Libro.pdb

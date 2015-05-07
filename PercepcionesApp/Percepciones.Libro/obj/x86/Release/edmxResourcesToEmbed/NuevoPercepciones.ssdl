@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PercepcionesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PercepcionesModelStoreContainer">
+    <EntitySet Name="DOC_NC_AG" EntityType="PercepcionesModel.Store.DOC_NC_AG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DOCUMENTO" EntityType="PercepcionesModel.Store.DOCUMENTO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RESUMEN_RESTA" EntityType="PercepcionesModel.Store.RESUMEN_RESTA" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="DOC_NC_AG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGO_CLIENTE" Type="varchar" MaxLength="50" />
+    <Property Name="CODIGO_NC" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA" Type="varchar" MaxLength="10" />
+    <Property Name="MONTO" Type="decimal" Scale="2" />
+    <Property Name="PERCEPCION" Type="decimal" Scale="2" />
+    <Property Name="NOMBRE_CLIENTE" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="DOCUMENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deliver" Type="varchar" MaxLength="50" />
+    <Property Name="outlet" Type="varchar" MaxLength="50" />
+    <Property Name="document_type" Type="varchar" MaxLength="3" />
+    <Property Name="document_number" Type="varchar" MaxLength="15" />
+    <Property Name="fecha" Type="varchar" MaxLength="15" />
+    <Property Name="total_amount" Type="decimal" Scale="2" />
+    <Property Name="igv" Type="decimal" Scale="2" />
+    <Property Name="percepcion" Type="decimal" Scale="2" />
+    <Property Name="razon_social" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="mes" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="RESUMEN_RESTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CodCliente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SumaBoletas" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="NotaCredito" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Percepcion" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Restado" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+</Schema>

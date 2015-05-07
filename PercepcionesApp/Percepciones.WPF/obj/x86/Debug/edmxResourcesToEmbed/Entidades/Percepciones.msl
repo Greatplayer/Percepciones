@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PercepcionesModelStoreContainer" CdmEntityContainer="PercepcionesEntities">
+    <EntitySetMapping Name="DOC_NC_AG">
+      <EntityTypeMapping TypeName="PercepcionesModel.DOC_NC_AG">
+        <MappingFragment StoreEntitySet="DOC_NC_AG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CODIGO_CLIENTE" ColumnName="CODIGO_CLIENTE" />
+          <ScalarProperty Name="CODIGO_NC" ColumnName="CODIGO_NC" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="PERCEPCION" ColumnName="PERCEPCION" />
+          <ScalarProperty Name="NOMBRE_CLIENTE" ColumnName="NOMBRE_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCUMENTO">
+      <EntityTypeMapping TypeName="PercepcionesModel.DOCUMENTO">
+        <MappingFragment StoreEntitySet="DOCUMENTO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="deliver" ColumnName="deliver" />
+          <ScalarProperty Name="outlet" ColumnName="outlet" />
+          <ScalarProperty Name="document_type" ColumnName="document_type" />
+          <ScalarProperty Name="document_number" ColumnName="document_number" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+          <ScalarProperty Name="igv" ColumnName="igv" />
+          <ScalarProperty Name="percepcion" ColumnName="percepcion" />
+          <ScalarProperty Name="razon_social" ColumnName="razon_social" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIB_COBROS_DOC">
+      <EntityTypeMapping TypeName="PercepcionesModel.LIB_COBROS_DOC">
+        <MappingFragment StoreEntitySet="LIB_COBROS_DOC">
+          <ScalarProperty Name="ID_COBRO" ColumnName="ID_COBRO" />
+          <ScalarProperty Name="DELIVER_BY" ColumnName="DELIVER_BY" />
+          <ScalarProperty Name="COD_BAT" ColumnName="COD_BAT" />
+          <ScalarProperty Name="OUTLET_NUMBER" ColumnName="OUTLET_NUMBER" />
+          <ScalarProperty Name="INVOICE_NUMBER" ColumnName="INVOICE_NUMBER" />
+          <ScalarProperty Name="INVOICE_DATE" ColumnName="INVOICE_DATE" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="IGV" ColumnName="IGV" />
+          <ScalarProperty Name="PERCEPCION" ColumnName="PERCEPCION" />
+          <ScalarProperty Name="PERIODO" ColumnName="PERIODO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIB_DETALLE_PERIODO_CLIENTE">
+      <EntityTypeMapping TypeName="PercepcionesModel.LIB_DETALLE_PERIODO_CLIENTE">
+        <MappingFragment StoreEntitySet="LIB_DETALLE_PERIODO_CLIENTE">
+          <ScalarProperty Name="ID_DET_PERIODO" ColumnName="ID_DET_PERIODO" />
+          <ScalarProperty Name="TOTAL_HABER" ColumnName="TOTAL_HABER" />
+          <ScalarProperty Name="TOTAL_DEBE" ColumnName="TOTAL_DEBE" />
+          <ScalarProperty Name="SALDO" ColumnName="SALDO" />
+          <ScalarProperty Name="PERIODO" ColumnName="PERIODO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="SALDO_ANTERIOR" ColumnName="SALDO_ANTERIOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIB_GEN_EXCEL">
+      <EntityTypeMapping TypeName="PercepcionesModel.LIB_GEN_EXCEL">
+        <MappingFragment StoreEntitySet="LIB_GEN_EXCEL">
+          <ScalarProperty Name="NRODOC_CLIENTE" ColumnName="NRODOC_CLIENTE" />
+          <ScalarProperty Name="NRO_COMPROBANTE" ColumnName="NRO_COMPROBANTE" />
+          <ScalarProperty Name="TIPO_TRANSACCION" ColumnName="TIPO_TRANSACCION" />
+          <ScalarProperty Name="FECHA_TRANSACCION" ColumnName="FECHA_TRANSACCION" />
+          <ScalarProperty Name="MONTO_COMPROBANTE" ColumnName="MONTO_COMPROBANTE" />
+          <ScalarProperty Name="PERCEPCION" ColumnName="PERCEPCION" />
+          <ScalarProperty Name="FLAG_DEBE_HABER" ColumnName="FLAG_DEBE_HABER" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="COD_BAT" ColumnName="COD_BAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIB_MASTER_CLIENTES">
+      <EntityTypeMapping TypeName="PercepcionesModel.LIB_MASTER_CLIENTES">
+        <MappingFragment StoreEntitySet="LIB_MASTER_CLIENTES">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="CODIGO_RUT" ColumnName="CODIGO_RUT" />
+          <ScalarProperty Name="OUTLET_NAME" ColumnName="OUTLET_NAME" />
+          <ScalarProperty Name="SALDO_ACTUAL" ColumnName="SALDO_ACTUAL" />
+          <ScalarProperty Name="CODIGO_BAT" ColumnName="CODIGO_BAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIB_PERIODO">
+      <EntityTypeMapping TypeName="PercepcionesModel.LIB_PERIODO">
+        <MappingFragment StoreEntitySet="LIB_PERIODO">
+          <ScalarProperty Name="PERIODO" ColumnName="PERIODO" />
+          <ScalarProperty Name="EJERCICIO" ColumnName="EJERCICIO" />
+          <ScalarProperty Name="GENERO_LIBRO" ColumnName="GENERO_LIBRO" />
+          <ScalarProperty Name="GENERO_DETALLE" ColumnName="GENERO_DETALLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIB_VENTAS_DOC">
+      <EntityTypeMapping TypeName="PercepcionesModel.LIB_VENTAS_DOC">
+        <MappingFragment StoreEntitySet="LIB_VENTAS_DOC">
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="DELIVER_BY" ColumnName="DELIVER_BY" />
+          <ScalarProperty Name="OUTLET_NUMBER" ColumnName="OUTLET_NUMBER" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="INVOICE_NUMBER" ColumnName="INVOICE_NUMBER" />
+          <ScalarProperty Name="INVOICE_DATE" ColumnName="INVOICE_DATE" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="IGV" ColumnName="IGV" />
+          <ScalarProperty Name="PERCEPCION" ColumnName="PERCEPCION" />
+          <ScalarProperty Name="OUTLET_NAME" ColumnName="OUTLET_NAME" />
+          <ScalarProperty Name="PERIODO" ColumnName="PERIODO" />
+          <ScalarProperty Name="COD_BAT" ColumnName="COD_BAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOTA_CREDITO">
+      <EntityTypeMapping TypeName="PercepcionesModel.NOTA_CREDITO">
+        <MappingFragment StoreEntitySet="NOTA_CREDITO">
+          <ScalarProperty Name="TIPO_DOC" ColumnName="TIPO_DOC" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="RAZON_SOCIAL" ColumnName="RAZON_SOCIAL" />
+          <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+          <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="SERIE_COMPROBANTE" ColumnName="SERIE_COMPROBANTE" />
+          <ScalarProperty Name="NUMERO_COMPROBANTE" ColumnName="NUMERO_COMPROBANTE" />
+          <ScalarProperty Name="FECHA_EMISION" ColumnName="FECHA_EMISION" />
+          <ScalarProperty Name="DERECHO_FISCAL" ColumnName="DERECHO_FISCAL" />
+          <ScalarProperty Name="MAT_CONSTRUCCION" ColumnName="MAT_CONSTRUCCION" />
+          <ScalarProperty Name="PORCENTAJE_5" ColumnName="PORCENTAJE_5" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="TIPO_COMPROBANTE" ColumnName="TIPO_COMPROBANTE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGISTROS">
+      <EntityTypeMapping TypeName="PercepcionesModel.REGISTROS">
+        <MappingFragment StoreEntitySet="REGISTROS">
+          <ScalarProperty Name="TIPO_DOC" ColumnName="TIPO_DOC" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="RAZON_SOCIAL" ColumnName="RAZON_SOCIAL" />
+          <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+          <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="SERIE_COMPROBANTE" ColumnName="SERIE_COMPROBANTE" />
+          <ScalarProperty Name="NUMERO_COMPROBANTE" ColumnName="NUMERO_COMPROBANTE" />
+          <ScalarProperty Name="FECHA_EMISION" ColumnName="FECHA_EMISION" />
+          <ScalarProperty Name="DERECHO_FISCAL" ColumnName="DERECHO_FISCAL" />
+          <ScalarProperty Name="MAT_CONSTRUCCION" ColumnName="MAT_CONSTRUCCION" />
+          <ScalarProperty Name="PORCENTAJE_5" ColumnName="PORCENTAJE_5" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="TIPO_COMPROBANTE" ColumnName="TIPO_COMPROBANTE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESUMEN_RESTA">
+      <EntityTypeMapping TypeName="PercepcionesModel.RESUMEN_RESTA">
+        <MappingFragment StoreEntitySet="RESUMEN_RESTA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CodCliente" ColumnName="CodCliente" />
+          <ScalarProperty Name="SumaBoletas" ColumnName="SumaBoletas" />
+          <ScalarProperty Name="NotaCredito" ColumnName="NotaCredito" />
+          <ScalarProperty Name="Percepcion" ColumnName="Percepcion" />
+          <ScalarProperty Name="Restado" ColumnName="Restado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_LIB_LISTAR_EJERCICIO" FunctionName="PercepcionesModel.Store.SP_LIB_LISTAR_EJERCICIO" />
+    <FunctionImportMapping FunctionImportName="SP_LIB_LISTAR_PERIODO" FunctionName="PercepcionesModel.Store.SP_LIB_LISTAR_PERIODO" />
+    <FunctionImportMapping FunctionImportName="SP_LB_CARGAR_VENTAS_COBROS" FunctionName="PercepcionesModel.Store.SP_LB_CARGAR_VENTAS_COBROS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PercepcionesModel.SP_LB_CARGAR_VENTAS_COBROS_Result">
+          <ScalarProperty Name="FilaVentaT" ColumnName="FilaVentaT" />
+          <ScalarProperty Name="FilaCobroT" ColumnName="FilaCobroT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_LB_CARGAR_MAESTRO_VENTA_COBRO" FunctionName="PercepcionesModel.Store.SP_LB_CARGAR_MAESTRO_VENTA_COBRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PercepcionesModel.SP_LB_CARGAR_MAESTRO_VENTA_COBRO_Result">
+          <ScalarProperty Name="QTY_VENTAS" ColumnName="QTY_VENTAS" />
+          <ScalarProperty Name="QTY_COBROS" ColumnName="QTY_COBROS" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_LIB_LISTAR_CLIENTE" FunctionName="PercepcionesModel.Store.SP_LIB_LISTAR_CLIENTE" />
+    <FunctionImportMapping FunctionImportName="SP_LB_ELIMINAR_DATA_PERIODO" FunctionName="PercepcionesModel.Store.SP_LB_ELIMINAR_DATA_PERIODO" />
+    <FunctionImportMapping FunctionImportName="SP_LB_GENERAR_SALDO" FunctionName="PercepcionesModel.Store.SP_LB_GENERAR_SALDO" />
+    <FunctionImportMapping FunctionImportName="SP_LB_GENERAR_EXCEL_COBROS" FunctionName="PercepcionesModel.Store.SP_LB_GENERAR_EXCEL_COBROS" />
+    <FunctionImportMapping FunctionImportName="SP_LB_GENERAR_EXCEL_VENTAS" FunctionName="PercepcionesModel.Store.SP_LB_GENERAR_EXCEL_VENTAS" />
+    <FunctionImportMapping FunctionImportName="SP_LIB_ELIMINAR_EXCEL" FunctionName="PercepcionesModel.Store.SP_LIB_ELIMINAR_EXCEL" />
+    <FunctionImportMapping FunctionImportName="SP_LB_GENERAR_SALDO_X_PERIODO" FunctionName="PercepcionesModel.Store.SP_LB_GENERAR_SALDO_X_PERIODO" />
+    <FunctionImportMapping FunctionImportName="SP_UBICAR_DETALLE_PERIODO_X_BAT_X_PERIODO" FunctionName="PercepcionesModel.Store.SP_UBICAR_DETALLE_PERIODO_X_BAT_X_PERIODO" />
+    <FunctionImportMapping FunctionImportName="SP_LIB_LISTAR_DOCUMENTOS_GEN_EXCEL_X_CLIENTE" FunctionName="PercepcionesModel.Store.SP_LIB_LISTAR_DOCUMENTOS_GEN_EXCEL_X_CLIENTE" />
+  </EntityContainerMapping>
+</Mapping>

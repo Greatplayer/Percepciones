@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PercepcionesModelStoreContainer" CdmEntityContainer="PercepcionesEntities">
+    <EntitySetMapping Name="DOC_NC_AG">
+      <EntityTypeMapping TypeName="PercepcionesModel.DOC_NC_AG">
+        <MappingFragment StoreEntitySet="DOC_NC_AG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CODIGO_CLIENTE" ColumnName="CODIGO_CLIENTE" />
+          <ScalarProperty Name="CODIGO_NC" ColumnName="CODIGO_NC" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="PERCEPCION" ColumnName="PERCEPCION" />
+          <ScalarProperty Name="NOMBRE_CLIENTE" ColumnName="NOMBRE_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

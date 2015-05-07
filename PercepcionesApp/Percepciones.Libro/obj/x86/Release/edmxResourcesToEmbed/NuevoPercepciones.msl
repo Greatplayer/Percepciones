@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PercepcionesModelStoreContainer" CdmEntityContainer="PercepcionesEntities">
+    <EntitySetMapping Name="DOC_NC_AG">
+      <EntityTypeMapping TypeName="PercepcionesModel.DOC_NC_AG">
+        <MappingFragment StoreEntitySet="DOC_NC_AG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CODIGO_CLIENTE" ColumnName="CODIGO_CLIENTE" />
+          <ScalarProperty Name="CODIGO_NC" ColumnName="CODIGO_NC" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="PERCEPCION" ColumnName="PERCEPCION" />
+          <ScalarProperty Name="NOMBRE_CLIENTE" ColumnName="NOMBRE_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCUMENTO">
+      <EntityTypeMapping TypeName="PercepcionesModel.DOCUMENTO">
+        <MappingFragment StoreEntitySet="DOCUMENTO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="deliver" ColumnName="deliver" />
+          <ScalarProperty Name="outlet" ColumnName="outlet" />
+          <ScalarProperty Name="document_type" ColumnName="document_type" />
+          <ScalarProperty Name="document_number" ColumnName="document_number" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+          <ScalarProperty Name="igv" ColumnName="igv" />
+          <ScalarProperty Name="percepcion" ColumnName="percepcion" />
+          <ScalarProperty Name="razon_social" ColumnName="razon_social" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESUMEN_RESTA">
+      <EntityTypeMapping TypeName="PercepcionesModel.RESUMEN_RESTA">
+        <MappingFragment StoreEntitySet="RESUMEN_RESTA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CodCliente" ColumnName="CodCliente" />
+          <ScalarProperty Name="SumaBoletas" ColumnName="SumaBoletas" />
+          <ScalarProperty Name="NotaCredito" ColumnName="NotaCredito" />
+          <ScalarProperty Name="Percepcion" ColumnName="Percepcion" />
+          <ScalarProperty Name="Restado" ColumnName="Restado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PercepcionesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PercepcionesModelStoreContainer">
+    <EntitySet Name="DOC_NC_AG" EntityType="PercepcionesModel.Store.DOC_NC_AG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DOCUMENTO" EntityType="PercepcionesModel.Store.DOCUMENTO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LIB_COBROS_DOC" EntityType="PercepcionesModel.Store.LIB_COBROS_DOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LIB_DETALLE_PERIODO_CLIENTE" EntityType="PercepcionesModel.Store.LIB_DETALLE_PERIODO_CLIENTE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LIB_GEN_EXCEL" EntityType="PercepcionesModel.Store.LIB_GEN_EXCEL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LIB_MASTER_CLIENTES" EntityType="PercepcionesModel.Store.LIB_MASTER_CLIENTES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LIB_PERIODO" EntityType="PercepcionesModel.Store.LIB_PERIODO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LIB_VENTAS_DOC" EntityType="PercepcionesModel.Store.LIB_VENTAS_DOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NOTA_CREDITO" EntityType="PercepcionesModel.Store.NOTA_CREDITO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="REGISTROS" EntityType="PercepcionesModel.Store.REGISTROS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RESUMEN_RESTA" EntityType="PercepcionesModel.Store.RESUMEN_RESTA" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_COBROS_DOC_PERIODO" Association="PercepcionesModel.Store.FK_COBROS_DOC_PERIODO">
+      <End Role="LIB_PERIODO" EntitySet="LIB_PERIODO" />
+      <End Role="LIB_COBROS_DOC" EntitySet="LIB_COBROS_DOC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_PERIODO_MASTER_CLIENTES" Association="PercepcionesModel.Store.FK_DETALLE_PERIODO_MASTER_CLIENTES">
+      <End Role="LIB_MASTER_CLIENTES" EntitySet="LIB_MASTER_CLIENTES" />
+      <End Role="LIB_DETALLE_PERIODO_CLIENTE" EntitySet="LIB_DETALLE_PERIODO_CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_PERIODO_TABLA_PERIODO" Association="PercepcionesModel.Store.FK_DETALLE_PERIODO_TABLA_PERIODO">
+      <End Role="LIB_PERIODO" EntitySet="LIB_PERIODO" />
+      <End Role="LIB_DETALLE_PERIODO_CLIENTE" EntitySet="LIB_DETALLE_PERIODO_CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VENTAS_DOC_PERIODO" Association="PercepcionesModel.Store.FK_VENTAS_DOC_PERIODO">
+      <End Role="LIB_PERIODO" EntitySet="LIB_PERIODO" />
+      <End Role="LIB_VENTAS_DOC" EntitySet="LIB_VENTAS_DOC" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DOC_NC_AG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGO_CLIENTE" Type="varchar" MaxLength="50" />
+    <Property Name="CODIGO_NC" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA" Type="varchar" MaxLength="10" />
+    <Property Name="MONTO" Type="decimal" Scale="2" />
+    <Property Name="PERCEPCION" Type="decimal" Scale="2" />
+    <Property Name="NOMBRE_CLIENTE" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="DOCUMENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deliver" Type="varchar" MaxLength="50" />
+    <Property Name="outlet" Type="varchar" MaxLength="50" />
+    <Property Name="document_type" Type="varchar" MaxLength="3" />
+    <Property Name="document_number" Type="varchar" MaxLength="15" />
+    <Property Name="fecha" Type="varchar" MaxLength="15" />
+    <Property Name="total_amount" Type="decimal" Scale="2" />
+    <Property Name="igv" Type="decimal" Scale="2" />
+    <Property Name="percepcion" Type="decimal" Scale="2" />
+    <Property Name="razon_social" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="mes" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="LIB_COBROS_DOC">
+    <Key>
+      <PropertyRef Name="ID_COBRO" />
+    </Key>
+    <Property Name="ID_COBRO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DELIVER_BY" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="COD_BAT" Type="varchar" Nullable="false" MaxLength="16" />
+    <Property Name="OUTLET_NUMBER" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="INVOICE_NUMBER" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="INVOICE_DATE" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MONTO" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="IGV" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="PERCEPCION" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="PERIODO" Type="varchar" Nullable="false" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="LIB_DETALLE_PERIODO_CLIENTE">
+    <Key>
+      <PropertyRef Name="ID_DET_PERIODO" />
+    </Key>
+    <Property Name="ID_DET_PERIODO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TOTAL_HABER" Type="decimal" Scale="2" />
+    <Property Name="TOTAL_DEBE" Type="decimal" Scale="2" />
+    <Property Name="SALDO" Type="decimal" Scale="2" />
+    <Property Name="PERIODO" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+    <Property Name="SALDO_ANTERIOR" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="LIB_GEN_EXCEL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="NRODOC_CLIENTE" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="NRO_COMPROBANTE" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="TIPO_TRANSACCION" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="FECHA_TRANSACCION" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MONTO_COMPROBANTE" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="PERCEPCION" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="FLAG_DEBE_HABER" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="COD_BAT" Type="varchar" Nullable="false" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="LIB_MASTER_CLIENTES">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGO_RUT" Type="varchar" MaxLength="20" />
+    <Property Name="OUTLET_NAME" Type="varchar" MaxLength="200" />
+    <Property Name="SALDO_ACTUAL" Type="decimal" Scale="2" />
+    <Property Name="CODIGO_BAT" Type="varchar" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="LIB_PERIODO">
+    <Key>
+      <PropertyRef Name="PERIODO" />
+    </Key>
+    <Property Name="PERIODO" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="EJERCICIO" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="GENERO_LIBRO" Type="int" Nullable="false" />
+    <Property Name="GENERO_DETALLE" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIB_VENTAS_DOC">
+    <Key>
+      <PropertyRef Name="ID_VENTA" />
+    </Key>
+    <Property Name="ID_VENTA" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DELIVER_BY" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="OUTLET_NUMBER" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="DOC_TYPE" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="INVOICE_NUMBER" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="INVOICE_DATE" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MONTO" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="IGV" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="PERCEPCION" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="OUTLET_NAME" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="PERIODO" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="COD_BAT" Type="varchar" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="NOTA_CREDITO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="TIPO_DOC" Type="varchar" MaxLength="2" />
+    <Property Name="DOCUMENTO" Type="varchar" MaxLength="12" />
+    <Property Name="RAZON_SOCIAL" Type="varchar" MaxLength="100" />
+    <Property Name="APELLIDO_PATERNO" Type="varchar" MaxLength="100" />
+    <Property Name="APELLIDO_MATERNO" Type="varchar" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
+    <Property Name="SERIE_COMPROBANTE" Type="varchar" MaxLength="4" />
+    <Property Name="NUMERO_COMPROBANTE" Type="varchar" MaxLength="8" />
+    <Property Name="FECHA_EMISION" Type="varchar" MaxLength="10" />
+    <Property Name="DERECHO_FISCAL" Type="varchar" MaxLength="1" />
+    <Property Name="MAT_CONSTRUCCION" Type="varchar" MaxLength="1" />
+    <Property Name="PORCENTAJE_5" Type="varchar" MaxLength="1" />
+    <Property Name="MONTO" Type="decimal" Precision="24" Scale="2" />
+    <Property Name="TIPO_COMPROBANTE" Type="varchar" MaxLength="2" />
+    <Property Name="ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="REGISTROS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="TIPO_DOC" Type="varchar" MaxLength="2" />
+    <Property Name="DOCUMENTO" Type="varchar" MaxLength="12" />
+    <Property Name="RAZON_SOCIAL" Type="varchar" MaxLength="100" />
+    <Property Name="APELLIDO_PATERNO" Type="varchar" MaxLength="100" />
+    <Property Name="APELLIDO_MATERNO" Type="varchar" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
+    <Property Name="SERIE_COMPROBANTE" Type="varchar" MaxLength="4" />
+    <Property Name="NUMERO_COMPROBANTE" Type="varchar" MaxLength="8" />
+    <Property Name="FECHA_EMISION" Type="varchar" MaxLength="10" />
+    <Property Name="DERECHO_FISCAL" Type="varchar" MaxLength="1" />
+    <Property Name="MAT_CONSTRUCCION" Type="varchar" MaxLength="1" />
+    <Property Name="PORCENTAJE_5" Type="varchar" MaxLength="1" />
+    <Property Name="MONTO" Type="decimal" Precision="24" Scale="2" />
+    <Property Name="TIPO_COMPROBANTE" Type="varchar" MaxLength="2" />
+    <Property Name="ID" Type="numeric" Nullable="false" Precision="10" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="RESUMEN_RESTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CodCliente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SumaBoletas" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="NotaCredito" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Percepcion" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Restado" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <Association Name="FK_COBROS_DOC_PERIODO">
+    <End Role="LIB_PERIODO" Type="PercepcionesModel.Store.LIB_PERIODO" Multiplicity="1" />
+    <End Role="LIB_COBROS_DOC" Type="PercepcionesModel.Store.LIB_COBROS_DOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIB_PERIODO">
+        <PropertyRef Name="PERIODO" />
+      </Principal>
+      <Dependent Role="LIB_COBROS_DOC">
+        <PropertyRef Name="PERIODO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETALLE_PERIODO_MASTER_CLIENTES">
+    <End Role="LIB_MASTER_CLIENTES" Type="PercepcionesModel.Store.LIB_MASTER_CLIENTES" Multiplicity="1" />
+    <End Role="LIB_DETALLE_PERIODO_CLIENTE" Type="PercepcionesModel.Store.LIB_DETALLE_PERIODO_CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIB_MASTER_CLIENTES">
+        <PropertyRef Name="ID_CLIENTE" />
+      </Principal>
+      <Dependent Role="LIB_DETALLE_PERIODO_CLIENTE">
+        <PropertyRef Name="ID_CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETALLE_PERIODO_TABLA_PERIODO">
+    <End Role="LIB_PERIODO" Type="PercepcionesModel.Store.LIB_PERIODO" Multiplicity="1" />
+    <End Role="LIB_DETALLE_PERIODO_CLIENTE" Type="PercepcionesModel.Store.LIB_DETALLE_PERIODO_CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIB_PERIODO">
+        <PropertyRef Name="PERIODO" />
+      </Principal>
+      <Dependent Role="LIB_DETALLE_PERIODO_CLIENTE">
+        <PropertyRef Name="PERIODO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VENTAS_DOC_PERIODO">
+    <End Role="LIB_PERIODO" Type="PercepcionesModel.Store.LIB_PERIODO" Multiplicity="1" />
+    <End Role="LIB_VENTAS_DOC" Type="PercepcionesModel.Store.LIB_VENTAS_DOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIB_PERIODO">
+        <PropertyRef Name="PERIODO" />
+      </Principal>
+      <Dependent Role="LIB_VENTAS_DOC">
+        <PropertyRef Name="PERIODO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="SP_CARGAR_DOCUMENTOS_PERCEP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PathDocumentos" Type="varchar" Mode="In" />
+    <Parameter Name="PathNotaCred" Type="varchar" Mode="In" />
+    <Parameter Name="Retorno" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SP_LB_CARGAR_MAESTRO_VENTA_COBRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PERIODOCALCULAR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LB_CARGAR_VENTAS_COBROS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pathVenta" Type="varchar" Mode="In" />
+    <Parameter Name="pathCobro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LB_ELIMINAR_DATA_PERIODO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="periodo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LB_GENERAR_EXCEL_COBROS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PERIODO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LB_GENERAR_EXCEL_VENTAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PERIODO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LB_GENERAR_SALDO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PERIODO_CALCULAR" Type="varchar" Mode="In" />
+    <Parameter Name="PERIODO_ANTERIOR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LB_GENERAR_SALDO_CLIENTE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PERIODO_CALCULAR" Type="varchar" Mode="In" />
+    <Parameter Name="PERIODO_ANTERIOR" Type="varchar" Mode="In" />
+    <Parameter Name="CODIGO_BAT" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LB_GENERAR_SALDO_X_PERIODO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PERIODO_CALCULAR" Type="varchar" Mode="In" />
+    <Parameter Name="PERIODO_ANTERIOR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LIB_ELIMINAR_EXCEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_LIB_LISTAR_CLIENTE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_LIB_LISTAR_DOCUMENTOS_GEN_EXCEL_X_CLIENTE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codBat" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LIB_LISTAR_EJERCICIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_LIB_LISTAR_PERIODO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ejercicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_UBICAR_DETALLE_PERIODO_X_BAT_X_PERIODO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codBat" Type="varchar" Mode="In" />
+    <Parameter Name="periodo" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

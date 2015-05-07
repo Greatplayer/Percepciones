@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PercepcionesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="PercepcionesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DOC_NC_AG" EntityType="PercepcionesModel.DOC_NC_AG" />
+    <EntitySet Name="DOCUMENTO" EntityType="PercepcionesModel.DOCUMENTO" />
+    <EntitySet Name="LIB_COBROS_DOC" EntityType="PercepcionesModel.LIB_COBROS_DOC" />
+    <EntitySet Name="LIB_DETALLE_PERIODO_CLIENTE" EntityType="PercepcionesModel.LIB_DETALLE_PERIODO_CLIENTE" />
+    <EntitySet Name="LIB_GEN_EXCEL" EntityType="PercepcionesModel.LIB_GEN_EXCEL" />
+    <EntitySet Name="LIB_MASTER_CLIENTES" EntityType="PercepcionesModel.LIB_MASTER_CLIENTES" />
+    <EntitySet Name="LIB_PERIODO" EntityType="PercepcionesModel.LIB_PERIODO" />
+    <EntitySet Name="LIB_VENTAS_DOC" EntityType="PercepcionesModel.LIB_VENTAS_DOC" />
+    <EntitySet Name="NOTA_CREDITO" EntityType="PercepcionesModel.NOTA_CREDITO" />
+    <EntitySet Name="REGISTROS" EntityType="PercepcionesModel.REGISTROS" />
+    <EntitySet Name="RESUMEN_RESTA" EntityType="PercepcionesModel.RESUMEN_RESTA" />
+    <AssociationSet Name="FK_COBROS_DOC_PERIODO" Association="PercepcionesModel.FK_COBROS_DOC_PERIODO">
+      <End Role="LIB_PERIODO" EntitySet="LIB_PERIODO" />
+      <End Role="LIB_COBROS_DOC" EntitySet="LIB_COBROS_DOC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_PERIODO_MASTER_CLIENTES" Association="PercepcionesModel.FK_DETALLE_PERIODO_MASTER_CLIENTES">
+      <End Role="LIB_MASTER_CLIENTES" EntitySet="LIB_MASTER_CLIENTES" />
+      <End Role="LIB_DETALLE_PERIODO_CLIENTE" EntitySet="LIB_DETALLE_PERIODO_CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_PERIODO_TABLA_PERIODO" Association="PercepcionesModel.FK_DETALLE_PERIODO_TABLA_PERIODO">
+      <End Role="LIB_PERIODO" EntitySet="LIB_PERIODO" />
+      <End Role="LIB_DETALLE_PERIODO_CLIENTE" EntitySet="LIB_DETALLE_PERIODO_CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VENTAS_DOC_PERIODO" Association="PercepcionesModel.FK_VENTAS_DOC_PERIODO">
+      <End Role="LIB_PERIODO" EntitySet="LIB_PERIODO" />
+      <End Role="LIB_VENTAS_DOC" EntitySet="LIB_VENTAS_DOC" />
+    </AssociationSet>
+    <FunctionImport Name="SP_LIB_LISTAR_EJERCICIO" ReturnType="Collection(String)" />
+    <FunctionImport Name="SP_LIB_LISTAR_PERIODO" ReturnType="Collection(String)">
+      <Parameter Name="ejercicio" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LB_CARGAR_VENTAS_COBROS" ReturnType="Collection(PercepcionesModel.SP_LB_CARGAR_VENTAS_COBROS_Result)">
+      <Parameter Name="pathVenta" Mode="In" Type="String" />
+      <Parameter Name="pathCobro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LB_CARGAR_MAESTRO_VENTA_COBRO" ReturnType="Collection(PercepcionesModel.SP_LB_CARGAR_MAESTRO_VENTA_COBRO_Result)">
+      <Parameter Name="PERIODOCALCULAR" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LIB_LISTAR_CLIENTE" EntitySet="LIB_MASTER_CLIENTES" ReturnType="Collection(PercepcionesModel.LIB_MASTER_CLIENTES)" />
+    <FunctionImport Name="SP_LB_ELIMINAR_DATA_PERIODO">
+      <Parameter Name="periodo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LB_GENERAR_SALDO_CLIENTE">
+      <Parameter Name="PERIODO_CALCULAR" Mode="In" Type="String" />
+      <Parameter Name="PERIODO_ANTERIOR" Mode="In" Type="String" />
+      <Parameter Name="CODIGO_BAT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LB_GENERAR_SALDO">
+      <Parameter Name="PERIODO_CALCULAR" Mode="In" Type="String" />
+      <Parameter Name="PERIODO_ANTERIOR" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LB_GENERAR_EXCEL_COBROS">
+      <Parameter Name="PERIODO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LB_GENERAR_EXCEL_VENTAS">
+      <Parameter Name="PERIODO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LIB_ELIMINAR_EXCEL" />
+    <FunctionImport Name="SP_LB_GENERAR_SALDO_X_PERIODO">
+      <Parameter Name="PERIODO_CALCULAR" Mode="In" Type="String" />
+      <Parameter Name="PERIODO_ANTERIOR" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UBICAR_DETALLE_PERIODO_X_BAT_X_PERIODO" EntitySet="LIB_DETALLE_PERIODO_CLIENTE" ReturnType="Collection(PercepcionesModel.LIB_DETALLE_PERIODO_CLIENTE)">
+      <Parameter Name="codBat" Mode="In" Type="String" />
+      <Parameter Name="periodo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LIB_LISTAR_DOCUMENTOS_GEN_EXCEL_X_CLIENTE" EntitySet="LIB_GEN_EXCEL" ReturnType="Collection(PercepcionesModel.LIB_GEN_EXCEL)">
+      <Parameter Name="codBat" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="DOC_NC_AG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGO_CLIENTE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CODIGO_NC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MONTO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PERCEPCION" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NOMBRE_CLIENTE" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="DOCUMENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deliver" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="outlet" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="document_type" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="document_number" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="fecha" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="total_amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="igv" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="percepcion" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="razon_social" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="mes" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="LIB_COBROS_DOC">
+    <Key>
+      <PropertyRef Name="ID_COBRO" />
+    </Key>
+    <Property Name="ID_COBRO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DELIVER_BY" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COD_BAT" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="OUTLET_NUMBER" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="INVOICE_NUMBER" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="INVOICE_DATE" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MONTO" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IGV" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PERCEPCION" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PERIODO" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="LIB_PERIODO" Relationship="PercepcionesModel.FK_COBROS_DOC_PERIODO" FromRole="LIB_COBROS_DOC" ToRole="LIB_PERIODO" />
+  </EntityType>
+  <EntityType Name="LIB_DETALLE_PERIODO_CLIENTE">
+    <Key>
+      <PropertyRef Name="ID_DET_PERIODO" />
+    </Key>
+    <Property Name="ID_DET_PERIODO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TOTAL_HABER" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_DEBE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SALDO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PERIODO" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
+    <Property Name="SALDO_ANTERIOR" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="LIB_MASTER_CLIENTES" Relationship="PercepcionesModel.FK_DETALLE_PERIODO_MASTER_CLIENTES" FromRole="LIB_DETALLE_PERIODO_CLIENTE" ToRole="LIB_MASTER_CLIENTES" />
+    <NavigationProperty Name="LIB_PERIODO" Relationship="PercepcionesModel.FK_DETALLE_PERIODO_TABLA_PERIODO" FromRole="LIB_DETALLE_PERIODO_CLIENTE" ToRole="LIB_PERIODO" />
+  </EntityType>
+  <EntityType Name="LIB_GEN_EXCEL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="NRODOC_CLIENTE" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="NRO_COMPROBANTE" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="TIPO_TRANSACCION" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_TRANSACCION" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MONTO_COMPROBANTE" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PERCEPCION" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="FLAG_DEBE_HABER" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COD_BAT" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="LIB_MASTER_CLIENTES">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGO_RUT" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="OUTLET_NAME" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="SALDO_ACTUAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CODIGO_BAT" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="LIB_DETALLE_PERIODO_CLIENTE" Relationship="PercepcionesModel.FK_DETALLE_PERIODO_MASTER_CLIENTES" FromRole="LIB_MASTER_CLIENTES" ToRole="LIB_DETALLE_PERIODO_CLIENTE" />
+  </EntityType>
+  <EntityType Name="LIB_PERIODO">
+    <Key>
+      <PropertyRef Name="PERIODO" />
+    </Key>
+    <Property Name="PERIODO" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="EJERCICIO" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="GENERO_LIBRO" Type="Int32" Nullable="false" />
+    <Property Name="GENERO_DETALLE" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LIB_COBROS_DOC" Relationship="PercepcionesModel.FK_COBROS_DOC_PERIODO" FromRole="LIB_PERIODO" ToRole="LIB_COBROS_DOC" />
+    <NavigationProperty Name="LIB_DETALLE_PERIODO_CLIENTE" Relationship="PercepcionesModel.FK_DETALLE_PERIODO_TABLA_PERIODO" FromRole="LIB_PERIODO" ToRole="LIB_DETALLE_PERIODO_CLIENTE" />
+    <NavigationProperty Name="LIB_VENTAS_DOC" Relationship="PercepcionesModel.FK_VENTAS_DOC_PERIODO" FromRole="LIB_PERIODO" ToRole="LIB_VENTAS_DOC" />
+  </EntityType>
+  <EntityType Name="LIB_VENTAS_DOC">
+    <Key>
+      <PropertyRef Name="ID_VENTA" />
+    </Key>
+    <Property Name="ID_VENTA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DELIVER_BY" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OUTLET_NUMBER" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="DOC_TYPE" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="INVOICE_NUMBER" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="INVOICE_DATE" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MONTO" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IGV" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PERCEPCION" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="OUTLET_NAME" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="PERIODO" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="COD_BAT" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="LIB_PERIODO" Relationship="PercepcionesModel.FK_VENTAS_DOC_PERIODO" FromRole="LIB_VENTAS_DOC" ToRole="LIB_PERIODO" />
+  </EntityType>
+  <EntityType Name="NOTA_CREDITO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="TIPO_DOC" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="DOCUMENTO" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="RAZON_SOCIAL" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="APELLIDO_PATERNO" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="APELLIDO_MATERNO" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="SERIE_COMPROBANTE" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="NUMERO_COMPROBANTE" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_EMISION" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DERECHO_FISCAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="MAT_CONSTRUCCION" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="PORCENTAJE_5" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="MONTO" Type="Decimal" Precision="24" Scale="2" />
+    <Property Name="TIPO_COMPROBANTE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="REGISTROS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="TIPO_DOC" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="DOCUMENTO" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="RAZON_SOCIAL" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="APELLIDO_PATERNO" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="APELLIDO_MATERNO" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="SERIE_COMPROBANTE" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="NUMERO_COMPROBANTE" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_EMISION" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DERECHO_FISCAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="MAT_CONSTRUCCION" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="PORCENTAJE_5" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="MONTO" Type="Decimal" Precision="24" Scale="2" />
+    <Property Name="TIPO_COMPROBANTE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="10" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="RESUMEN_RESTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodCliente" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SumaBoletas" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="NotaCredito" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Percepcion" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Restado" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <Association Name="FK_COBROS_DOC_PERIODO">
+    <End Role="LIB_PERIODO" Type="PercepcionesModel.LIB_PERIODO" Multiplicity="1" />
+    <End Role="LIB_COBROS_DOC" Type="PercepcionesModel.LIB_COBROS_DOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIB_PERIODO">
+        <PropertyRef Name="PERIODO" />
+      </Principal>
+      <Dependent Role="LIB_COBROS_DOC">
+        <PropertyRef Name="PERIODO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETALLE_PERIODO_MASTER_CLIENTES">
+    <End Role="LIB_MASTER_CLIENTES" Type="PercepcionesModel.LIB_MASTER_CLIENTES" Multiplicity="1" />
+    <End Role="LIB_DETALLE_PERIODO_CLIENTE" Type="PercepcionesModel.LIB_DETALLE_PERIODO_CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIB_MASTER_CLIENTES">
+        <PropertyRef Name="ID_CLIENTE" />
+      </Principal>
+      <Dependent Role="LIB_DETALLE_PERIODO_CLIENTE">
+        <PropertyRef Name="ID_CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETALLE_PERIODO_TABLA_PERIODO">
+    <End Role="LIB_PERIODO" Type="PercepcionesModel.LIB_PERIODO" Multiplicity="1" />
+    <End Role="LIB_DETALLE_PERIODO_CLIENTE" Type="PercepcionesModel.LIB_DETALLE_PERIODO_CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIB_PERIODO">
+        <PropertyRef Name="PERIODO" />
+      </Principal>
+      <Dependent Role="LIB_DETALLE_PERIODO_CLIENTE">
+        <PropertyRef Name="PERIODO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VENTAS_DOC_PERIODO">
+    <End Role="LIB_PERIODO" Type="PercepcionesModel.LIB_PERIODO" Multiplicity="1" />
+    <End Role="LIB_VENTAS_DOC" Type="PercepcionesModel.LIB_VENTAS_DOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIB_PERIODO">
+        <PropertyRef Name="PERIODO" />
+      </Principal>
+      <Dependent Role="LIB_VENTAS_DOC">
+        <PropertyRef Name="PERIODO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="SP_LB_CARGAR_VENTAS_COBROS_Result">
+    <Property Type="Int32" Name="FilaVentaT" Nullable="true" />
+    <Property Type="Int32" Name="FilaCobroT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_LB_CARGAR_MAESTRO_VENTA_COBRO_Result">
+    <Property Type="Int32" Name="QTY_VENTAS" Nullable="true" />
+    <Property Type="Int32" Name="QTY_COBROS" Nullable="true" />
+  </ComplexType>
+</Schema>

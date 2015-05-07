@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PercepcionesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PercepcionesModelStoreContainer">
+          <EntitySet Name="DOC_NC_AG" EntityType="PercepcionesModel.Store.DOC_NC_AG" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="DOC_NC_AG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CODIGO_CLIENTE" Type="varchar" MaxLength="50" />
+          <Property Name="CODIGO_NC" Type="varchar" MaxLength="50" />
+          <Property Name="FECHA" Type="varchar" MaxLength="10" />
+          <Property Name="MONTO" Type="decimal" Scale="2" />
+          <Property Name="PERCEPCION" Type="decimal" Scale="2" />
+          <Property Name="NOMBRE_CLIENTE" Type="varchar" MaxLength="200" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PercepcionesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="PercepcionesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DOC_NC_AG" EntityType="PercepcionesModel.DOC_NC_AG" />
+        </EntityContainer>
+        <EntityType Name="DOC_NC_AG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CODIGO_CLIENTE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CODIGO_NC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FECHA" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="MONTO" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PERCEPCION" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NOMBRE_CLIENTE" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PercepcionesModelStoreContainer" CdmEntityContainer="PercepcionesEntities">
+          <EntitySetMapping Name="DOC_NC_AG"><EntityTypeMapping TypeName="PercepcionesModel.DOC_NC_AG"><MappingFragment StoreEntitySet="DOC_NC_AG">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="CODIGO_CLIENTE" ColumnName="CODIGO_CLIENTE" />
+            <ScalarProperty Name="CODIGO_NC" ColumnName="CODIGO_NC" />
+            <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+            <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+            <ScalarProperty Name="PERCEPCION" ColumnName="PERCEPCION" />
+            <ScalarProperty Name="NOMBRE_CLIENTE" ColumnName="NOMBRE_CLIENTE" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="PercepcionesModel.DOC_NC_AG" Width="1.5" PointX="0.75" PointY="0.75" Height="2.3648893229166665" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

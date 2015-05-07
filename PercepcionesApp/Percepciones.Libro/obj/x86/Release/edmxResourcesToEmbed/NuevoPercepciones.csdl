@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PercepcionesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="PercepcionesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DOC_NC_AG" EntityType="PercepcionesModel.DOC_NC_AG" />
+    <EntitySet Name="DOCUMENTO" EntityType="PercepcionesModel.DOCUMENTO" />
+    <EntitySet Name="RESUMEN_RESTA" EntityType="PercepcionesModel.RESUMEN_RESTA" />
+  </EntityContainer>
+  <EntityType Name="DOC_NC_AG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGO_CLIENTE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CODIGO_NC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MONTO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PERCEPCION" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NOMBRE_CLIENTE" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="DOCUMENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deliver" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="outlet" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="document_type" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="document_number" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="fecha" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="total_amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="igv" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="percepcion" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="razon_social" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="mes" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="RESUMEN_RESTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodCliente" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SumaBoletas" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="NotaCredito" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Percepcion" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Restado" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+  </EntityType>
+</Schema>
