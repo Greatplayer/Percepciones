@@ -1,0 +1,6 @@
+Aplicación para calculo de percepciones de la SUNAT - Peru.
+
+- Base de Datos SQL Server 2008
+- Entity Framework 4.0
+- .Net Framework 4.0
+- WPF
